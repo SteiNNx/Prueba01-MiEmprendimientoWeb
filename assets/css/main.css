@@ -1,9 +1,9 @@
 /** Init: @import __Main.scss */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
 /** __Variables */
 /** static-fonts */
 /** Colors */
+/** BreakPoints Sizes */
 /** __Mixins */
 /** __FontAwesome */
 /** Habria que compilar con webpack y usar resolve-url-loader */
@@ -6109,8 +6109,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../webfonts/fa-brands-400.eot");
-  src: url("../webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.woff") format("woff"), url("../webfonts/fa-brands-400.ttf") format("truetype"), url("../webfonts/fa-brands-400.svg#fontawesome") format("svg");
+  src: url("../static/webfonts/fa-brands-400.eot");
+  src: url("../static/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../static/webfonts/fa-brands-400.woff2") format("woff2"), url("../static/webfonts/fa-brands-400.woff") format("woff"), url("../static/webfonts/fa-brands-400.ttf") format("truetype"), url("../static/webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
 .fab {
   font-family: "Font Awesome 5 Brands";
@@ -6126,8 +6126,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("../webfonts/fa-solid-900.eot");
-  src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg");
+  src: url("../static/webfonts/fa-solid-900.eot");
+  src: url("../static/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../static/webfonts/fa-solid-900.woff2") format("woff2"), url("../static/webfonts/fa-solid-900.woff") format("woff"), url("../static/webfonts/fa-solid-900.ttf") format("truetype"), url("../static/webfonts/fa-solid-900.svg#fontawesome") format("svg");
 }
 .fa,
 .fas {
@@ -6144,8 +6144,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../webfonts/fa-regular-400.eot");
-  src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg");
+  src: url("../static/webfonts/fa-regular-400.eot");
+  src: url("../static/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../static/webfonts/fa-regular-400.woff2") format("woff2"), url("../static/webfonts/fa-regular-400.woff") format("woff"), url("../static/webfonts/fa-regular-400.ttf") format("truetype"), url("../static/webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
 .far {
   font-family: "Font Awesome 5 Free";
@@ -14996,9 +14996,172 @@ readers do not read off random characters that represent icons */
   width: auto;
 }
 
-/** __Reset */
 /** __Typography */
+/** weight */
+/** size */
+/** __Reset */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  margin: 0px;
+}
+
 /** __Navigation */
+.navbar {
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  padding: 0rem;
+  position: relative;
+  /** Support Browsers */
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+}
+.navbar__container {
+  align-items: center;
+  display: flex;
+  flex-wrap: inherit;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 1.75rem 0 0.25rem;
+  width: 100%;
+  /** Support Browsers */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -ms-flex-wrap: inherit;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  /** Breakpoints */
+}
+@media (min-width: 0px) and (max-width: 576px) {
+  .navbar__container {
+    padding: 0 0.25rem 0 0.25rem;
+  }
+}
+.navbar__container__brand {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  text-decoration: none;
+  white-space: nowrap;
+  /** Support Browsers */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+}
+.navbar__container__brand img {
+  width: 13rem;
+  height: 5rem;
+  /** Breakpoints */
+}
+@media (min-width: 0px) and (max-width: 576px) {
+  .navbar__container__brand img {
+    width: 8rem;
+    height: 3.8rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .navbar__container__brand img {
+    width: 10rem;
+    height: 4rem;
+  }
+}
+.navbar__container__toggler {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 0.25rem;
+  border-color: #000000;
+  display: none;
+  font-size: 1.25rem;
+  padding: 0.6rem 0.75rem 0.1rem 0.75rem;
+  /** Breakpoints */
+}
+@media (min-width: 0px) and (max-width: 576px) {
+  .navbar__container__toggler {
+    display: block;
+    margin: 0rem 1rem 0rem 0rem;
+  }
+}
+.navbar__container__toggler span {
+  height: 1.5em;
+  vertical-align: middle;
+  width: 1.5em;
+}
+.navbar__container__collapse {
+  align-items: center;
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 1;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  width: 100%;
+  /** Support Browsers */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -ms-flex-preferred-size: auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  /** Breakpoints */
+}
+@media (min-width: 0px) and (max-width: 576px) {
+  .navbar__container__collapse {
+    display: none;
+  }
+}
+.navbar__container__collapse ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-top: 0;
+  padding-left: 0;
+  width: 100%;
+  /** Support Browsers */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+}
+.navbar__container__collapse ul li {
+  list-style: none;
+}
+.navbar__container__collapse ul li a {
+  color: #ffffff;
+  display: block;
+  list-style: none;
+  padding: 0.5rem 1rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  text-decoration: none;
+  transition: none;
+  /** Support Browsers */
+  -webkit-transition: none;
+  -o-transition: none;
+}
+
 /** __Grid */
 /** __Header */
 /** __Footer */

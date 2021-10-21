@@ -1,1 +1,29 @@
 /** __Mixins */
+@mixin breakpoint($point) {
+    @if $point == "Celular" {
+        @media (min-width: 0px) and (max-width: $width-sm) {
+            @content;
+        }
+    } @else if $point == "Tablet" {
+        @media (min-width: $width-sm) and (max-width: $width-lg) {
+            @content;
+        }
+    }
+}
+
+@mixin btn-colors($background-color, $background-color-hover) {
+    background-color: $background-color;
+    border: 5px solid $background-color;
+    border-radius: 3%;
+
+    /** Support Browsers */
+    -webkit-border-radius: 3%;
+    -moz-border-radius: 3%;
+    -ms-border-radius: 3%;
+    -o-border-radius: 3%;
+
+    &:hover {
+        background-color: $background-color-hover;
+        border: 5px solid $background-color-hover;
+    }
+}

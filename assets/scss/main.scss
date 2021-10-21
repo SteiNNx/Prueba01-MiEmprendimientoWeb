@@ -1,14 +1,13 @@
 /** Init: @import __Main.scss */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
 
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
 @import "vendors/font-awesome";
 
-@import "base/reset";
 @import "base/typography";
+@import "base/reset";
 
 @import "layout/navigation";
 @import "layout/grid";
