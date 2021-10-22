@@ -8,6 +8,10 @@
         @media (min-width: $width-sm) and (max-width: $width-lg) {
             @content;
         }
+    } @else if $point == "Desktop" {
+        @media (min-width: $width-lg){
+            @content;
+        }
     }
 }
 

@@ -1,1 +1,16 @@
 /** __Header */
+.header {
+    background-image: url(../images/desarrolloweb2021t.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 15rem;
+
+    /** Breakpoints */
+    @include breakpoint("Celular") {
+        height: 5rem;
+    }
+    @include breakpoint("Tablet") {
+        height: 10rem;
+    }
+}
