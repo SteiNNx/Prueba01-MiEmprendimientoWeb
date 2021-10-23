@@ -3,18 +3,136 @@
     display: grid;
 
     &__section {
-        @include breakpoint("Celular") {
+        border: 1px solid $black;
+
+        &__article_curso {
             border: 1px solid $black;
-            margin: 0.2rem 1rem;
-            padding: 2rem;
+            border-style: dotted;
+            padding: 20px;
+            margin: 10px;
+
+            img {
+                width: 100%;
+            }
+
+            h2 {
+                font-size: $x-large;
+                margin: 0.5rem 0 0.5rem 0;
+            }
+
+            p {
+                font-size: $medium;
+                width: 100%;
+            }
+            ul {
+                margin: 0.2rem;
+                padding: 0.2rem 0rem;
+                list-style: none;
+                li {
+                    display: inline-block;
+                    margin: 0.2rem;
+                }
+            }
+            h3 {
+                font-size: $large;
+                margin: 0.5rem 0 0.5rem 0;
+            }
+        }
+
+        &__article_detalle_cursos {
+            &__avatar {
+                text-align: center;
+
+                img {
+                    border: 1px solid $black;
+                    border-radius: 50%;
+                    width: 30%;
+                }
+
+                h2 {
+                    font-size: $x-large;
+                    margin: 0.5rem 0 0.5rem 0;
+                }
+
+                ul {
+                    margin: 0.2rem;
+                    padding: 0.2rem 0rem;
+                    list-style: none;
+
+                    li {
+                        display: inline-block;
+                        margin: 0.2rem;
+                    }
+                }
+            }
+
+            p {
+                font-size: $medium;
+                width: 100%;
+            }
+
+            ul {
+                font-family: $poppins;
+                list-style: circle;
+                padding-inline-start: 1.4rem;
+            }
+
+            &__svg {
+                margin: auto;
+                width: 20%;
+
+                .move {
+                    animation: move 5s infinite linear;
+                    transform-origin: 79.8% 79.8%;
+                }
+
+                @keyframes move {
+                    0% {
+                        transform: translate(0%, 0%);
+                    }
+                    50% {
+                        transform: translate(20%, 0%);
+                    }
+                    100% {
+                        transform: translate(0%, 0%);
+                    }
+                }
+
+                .spin {
+                    animation: spin 5s infinite linear;
+                    transform-origin: 79.8% 79.8%;
+                }
+
+                @keyframes spin {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+
+            @include breakpoint("Celular") {
+                padding: 0.5rem 0rem;
+            }
+            @include breakpoint("Tablet") {
+                padding: 1rem;
+            }
+            @include breakpoint("Desktop") {
+                padding: 2rem;
+            }
+        }
+
+        @include breakpoint("Celular") {
+            margin: 0.2rem 0.2rem;
+            padding: 0.7rem;
         }
         @include breakpoint("Tablet") {
-            border: 1px solid $black;
             margin: 1rem;
-            padding: 2rem;
+            padding: 1rem;
         }
         @include breakpoint("Desktop") {
-            border: 1px solid $black;
             margin: 1rem;
             padding: 2rem;
         }
@@ -22,23 +140,15 @@
 
     /** Breakpoints */
     @include breakpoint("Celular") {
-        grid-template-rows: auto;
+        grid-template-rows: 1fr;
         row-gap: 0.1rem;
     }
     @include breakpoint("Tablet") {
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         column-gap: 0.75;
-
-        /** Support Browsers */
-        -webkit-column-gap: 0.75;
-        -moz-column-gap: 0.75;
     }
     @include breakpoint("Desktop") {
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         column-gap: 1.5rem;
-
-        /** Support Browsers */
-        -webkit-column-gap: 1.5rem;
-        -moz-column-gap: 1.5rem;
     }
 }

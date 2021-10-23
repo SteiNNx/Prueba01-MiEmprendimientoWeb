@@ -15001,7 +15001,7 @@ readers do not read off random characters that represent icons */
 /** size */
 /** __Reset */
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 20px;
   margin: 0px;
 }
@@ -15011,6 +15011,7 @@ body {
   background-color: #000000;
   color: #ffffff;
   display: flex;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   justify-content: center;
   padding: 0rem;
@@ -15023,8 +15024,6 @@ body {
   align-items: center;
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
 }
 .navbar__container {
   align-items: center;
@@ -15036,8 +15035,6 @@ body {
   padding: 0 1.75rem 0 0.25rem;
   width: 100%;
   /** Support Browsers */
-  display: -webkit-box;
-  display: -ms-flexbox;
   -ms-flex-wrap: inherit;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -15097,6 +15094,9 @@ body {
     display: block;
     margin: 0rem 1rem 0rem 0rem;
   }
+  .navbar__container__toggler:hover {
+    color: #ffaf6d;
+  }
 }
 .navbar__container__toggler span {
   height: 1.5em;
@@ -15112,8 +15112,6 @@ body {
   padding: 0.2rem;
   width: 100%;
   /** Support Browsers */
-  display: -webkit-box;
-  display: -ms-flexbox;
   -ms-flex-preferred-size: auto;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -15137,8 +15135,6 @@ body {
   padding-left: 0;
   width: 100%;
   /** Support Browsers */
-  display: -webkit-box;
-  display: -ms-flexbox;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -15167,49 +15163,149 @@ body {
   display: grid;
   /** Breakpoints */
 }
+.container-grid__section {
+  border: 1px solid #000000;
+}
+.container-grid__section__article_curso {
+  border: 1px solid #000000;
+  border-style: dotted;
+  padding: 20px;
+  margin: 10px;
+}
+.container-grid__section__article_curso img {
+  width: 100%;
+}
+.container-grid__section__article_curso h2 {
+  font-size: 30px;
+  margin: 0.5rem 0 0.5rem 0;
+}
+.container-grid__section__article_curso p {
+  font-size: 16px;
+  width: 100%;
+}
+.container-grid__section__article_curso ul {
+  margin: 0.2rem;
+  padding: 0.2rem 0rem;
+  list-style: none;
+}
+.container-grid__section__article_curso ul li {
+  display: inline-block;
+  margin: 0.2rem;
+}
+.container-grid__section__article_curso h3 {
+  font-size: 20px;
+  margin: 0.5rem 0 0.5rem 0;
+}
+.container-grid__section__article_detalle_cursos__avatar {
+  text-align: center;
+}
+.container-grid__section__article_detalle_cursos__avatar img {
+  border: 1px solid #000000;
+  border-radius: 50%;
+  width: 30%;
+}
+.container-grid__section__article_detalle_cursos__avatar h2 {
+  font-size: 30px;
+  margin: 0.5rem 0 0.5rem 0;
+}
+.container-grid__section__article_detalle_cursos__avatar ul {
+  margin: 0.2rem;
+  padding: 0.2rem 0rem;
+  list-style: none;
+}
+.container-grid__section__article_detalle_cursos__avatar ul li {
+  display: inline-block;
+  margin: 0.2rem;
+}
+.container-grid__section__article_detalle_cursos p {
+  font-size: 16px;
+  width: 100%;
+}
+.container-grid__section__article_detalle_cursos ul {
+  font-family: "Poppins", sans-serif;
+  list-style: circle;
+  padding-inline-start: 1.4rem;
+}
+.container-grid__section__article_detalle_cursos__svg {
+  margin: auto;
+  width: 20%;
+}
+.container-grid__section__article_detalle_cursos__svg .move {
+  animation: move 5s infinite linear;
+  transform-origin: 79.8% 79.8%;
+}
+@keyframes move {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  50% {
+    transform: translate(20%, 0%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+.container-grid__section__article_detalle_cursos__svg .spin {
+  animation: spin 5s infinite linear;
+  transform-origin: 79.8% 79.8%;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (min-width: 0px) and (max-width: 576px) {
+  .container-grid__section__article_detalle_cursos {
+    padding: 0.5rem 0rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .container-grid__section__article_detalle_cursos {
+    padding: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .container-grid__section__article_detalle_cursos {
+    padding: 2rem;
+  }
+}
 @media (min-width: 0px) and (max-width: 576px) {
   .container-grid__section {
-    border: 1px solid #000000;
-    margin: 0.2rem 1rem;
-    padding: 2rem;
+    margin: 0.2rem 0.2rem;
+    padding: 0.7rem;
   }
 }
 @media (min-width: 576px) and (max-width: 992px) {
   .container-grid__section {
-    border: 1px solid #000000;
     margin: 1rem;
-    padding: 2rem;
+    padding: 1rem;
   }
 }
 @media (min-width: 992px) {
   .container-grid__section {
-    border: 1px solid #000000;
     margin: 1rem;
     padding: 2rem;
   }
 }
 @media (min-width: 0px) and (max-width: 576px) {
   .container-grid {
-    grid-template-rows: auto;
+    grid-template-rows: 1fr;
     row-gap: 0.1rem;
   }
 }
 @media (min-width: 576px) and (max-width: 992px) {
   .container-grid {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     column-gap: 0.75;
-    /** Support Browsers */
-    -webkit-column-gap: 0.75;
-    -moz-column-gap: 0.75;
   }
 }
 @media (min-width: 992px) {
   .container-grid {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     column-gap: 1.5rem;
-    /** Support Browsers */
-    -webkit-column-gap: 1.5rem;
-    -moz-column-gap: 1.5rem;
   }
 }
 
@@ -15219,24 +15315,132 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  height: 15rem;
+  height: 40rem;
   /** Breakpoints */
 }
 @media (min-width: 0px) and (max-width: 576px) {
   .header {
-    height: 5rem;
+    height: 10rem;
   }
 }
 @media (min-width: 576px) and (max-width: 992px) {
   .header {
-    height: 10rem;
+    height: 20rem;
   }
 }
 
 /** __Footer */
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  justify-content: space-between;
+  height: 5rem;
+  margin: 0.2rem 0rem;
+  width: auto;
+}
+.footer__derechos {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+}
+.footer__derechos p {
+  margin: 2rem;
+}
+@media (min-width: 0px) and (max-width: 576px) {
+  .footer__derechos p {
+    margin: 1rem;
+  }
+}
+@media (min-width: 0px) and (max-width: 576px) {
+  .footer__derechos {
+    width: 100%;
+  }
+}
+.footer__contacto {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+}
+.footer__contacto ul {
+  margin: 0.2rem;
+  padding: 0.2rem 0rem;
+  list-style: none;
+}
+.footer__contacto ul li {
+  display: inline-block;
+  margin: 0.2rem;
+}
+.footer__contacto ul li input:focus {
+  background-color: #ffaf6d;
+}
+@media (min-width: 0px) and (max-width: 576px) {
+  .footer__contacto ul li {
+    display: block;
+  }
+}
+@media (min-width: 0px) and (max-width: 576px) {
+  .footer__contacto {
+    width: 100%;
+  }
+}
+@media (min-width: 0px) and (max-width: 576px) {
+  .footer {
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 /** __Sidebar */
 /** __Forms */
 /** __Buttons */
+.button-mas-cursos {
+  color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  background-color: #000000;
+  border: 5px solid #000000;
+  border-radius: 3%;
+  /** Support Browsers */
+  -webkit-border-radius: 3%;
+  -moz-border-radius: 3%;
+  -ms-border-radius: 3%;
+  -o-border-radius: 3%;
+}
+.button-mas-cursos:hover {
+  background-color: #2e1503;
+  border: 5px solid #2e1503;
+}
+
+.button-footer-enviar {
+  color: #000000;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  width: 4rem;
+  background-color: #ffaf6d;
+  border: 5px solid #ffaf6d;
+  border-radius: 3%;
+  /** Support Browsers */
+  -webkit-border-radius: 3%;
+  -moz-border-radius: 3%;
+  -ms-border-radius: 3%;
+  -o-border-radius: 3%;
+}
+.button-footer-enviar:hover {
+  color: #000000;
+}
+.button-footer-enviar:hover {
+  background-color: #ffffff;
+  border: 5px solid #ffffff;
+}
+
 /** __Carousel */
 /** __Cover */
 /** __Dropdown */

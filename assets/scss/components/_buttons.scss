@@ -1,1 +1,21 @@
 /** __Buttons */
+.button-mas-cursos {
+    color: $white;
+    font-family: $ubuntu;
+    font-size: $large;
+    width: 100%;
+
+    @include btn-colors($black, $charcoal);
+}
+
+.button-footer-enviar {
+    color: $black;
+    font-family: $ubuntu;
+    font-size: $medium;
+    width: 4rem;
+
+    &:hover {
+        color: $black;
+    }
+    @include btn-colors($tangerine, $white);
+}
