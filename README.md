@@ -1,6 +1,6 @@
 # **Desafio Mi Emprendimiento Web**
 Prueba Modulo 02 CSS Avanzado
-[Ver Sitio](https://steinnx.github.io/Desafio05-GigeoAPP/)
+[Ver Sitio](https://steinnx.github.io/Prueba01-MiEmprendimientoWeb/)
 ## **Compilar SCSS**
 
 * Directo con sass
